@@ -1,0 +1,54 @@
+// footer styles
+
+grid-height= 300px
+grid-size= 30px
+
+#footer
+    background-color rgba(0, 0, 0, 10)
+    width 100%
+    padding-top: 60px
+    padding-bottom: 100px
+    padding-left: 0px
+    overflow: hidden;
+    position relative
+    z-index 1
+#footer-content
+    color cd-pink 
+    z-index 100
+    position relative
+    
+
+.grid
+    z-index: 10
+    margin: 0 auto;
+    position: absolute;
+    top: 100px;
+    left: -50%;
+    background-color: rgba(20 30 40 0.4);
+    background-image: linear-gradient(90deg, transparent 0%, transparent 85%, #FF7FBF 90%, transparent 95%), linear-gradient(0deg, transparent 0%, transparent 85%, #FF7FBF 90%, transparent 95%);
+    background-size: grid-size grid-size;
+    width: 200vw;
+    height: grid-height;
+    transform: translate3D(0, 0, 0) perspective(150px) rotateX(45deg) ;
+    perspective-origin: top;
+    
+    animation-name: movement;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+.grid:after 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: grid-height;
+    background: linear-gradient(to top, transparent, black);
+
+@keyframes movement 
+    0% {background-position: 0% 0%;}
+    100% {background-position: 0% 100%;}
+
+    
