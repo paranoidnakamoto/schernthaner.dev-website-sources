@@ -1,6 +1,8 @@
 // globalstyles
 
 max-content-width = 800px
+mobile-side-padding = 15px
+
 
 // global color variables
 //===================================================
@@ -10,11 +12,15 @@ cd-blue = #7704EA
 cd-dark = #12035A
 cd-black = #000000
 
+body
+    color cd-blue
+
 h1
     font-size: 17pt
     letter-spacing: 3.4pt
     text-transform: uppercase
     margin-bottom: 20px
+
 h2
     font-size: 15pt
     letter-spacing: 3pt
@@ -25,6 +31,11 @@ p
     letter-spacing: normal
     margin-bottom 10px
 
+a
+    color cd-pink
+
+
+
    //h1.super-fat//
   // font-size: 30px//
  //  font-weight bolder//
@@ -32,3 +43,13 @@ p
 .max-content
     max-width: max-content-width
     margin: auto
+    padding-left: mobile-side-padding
+    padding-right: mobile-side-padding
+
+
+paddingless-max-content-width = (max-content-width + (2 * mobile-side-padding))
+@media screen and (min-width: paddingless-max-content-width)
+    .max-content
+        padding-left: 0
+        padding-right: 0
+
