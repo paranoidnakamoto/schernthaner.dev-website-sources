@@ -1,8 +1,16 @@
 body
+    include ../svgiconmodule/svgicon.pug
     include ../headermodule/header.pug
     h1#title i Bims der Flo
     p Sample Paragraph little Text for no use so it better be also no test, well it might say hello, Hello! :D
     a(href="/blog.html") Go to Blog Page
+    svg#icon1: use(href="#svg-service-icon")
+    svg#icon2: use(href="#svg-continuous-integration-icon")
+    svg#icon3: use(href="#svg-smartcontract-icon")
+    svg#icon4: use(href="#svg-pwa-icon")
 
     include ../footermodule/footer.pug
+
+    
+    
     
